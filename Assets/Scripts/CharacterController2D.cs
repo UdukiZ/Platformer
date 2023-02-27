@@ -14,7 +14,6 @@ public class CharacterController2D : MonoBehaviour
     bool facingRight = true;
     float moveDirection = 0;
     bool isGrounded = false;
-    bool singleJumped = false;
     Vector3 cameraPos;
     Rigidbody2D r2d;
     CapsuleCollider2D mainCollider;
@@ -72,17 +71,12 @@ public class CharacterController2D : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
-            singleJumped = true;
-        }else if (Input.GetKeyDown(KeyCode.Space) && singleJumped)
-        {
-            r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
-            singleJumped = false;
         }
         // Dashing
-        // if (Input.GetKeyDown(KeyCode.LeftShift))
-        // {
-        //     r2d.velocity = new Vector2(dashLength, r2d.velocity.y);
-        // }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            r2d.velocity = new Vector2((moveDirection) * dashLength, r2d.velocity.y);
+        }
 
         // Camera follow
         if (mainCamera)
