@@ -9,6 +9,7 @@ public class CharacterController2D : MonoBehaviour
     private bool isFacingRight = true;
 
     private bool canDash = true;
+    private bool doubleJump = false;
     private bool isDashing;
     public float dashingPower = 12f;
     public float dashingTime = 0.2f;
@@ -29,8 +30,12 @@ public class CharacterController2D : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
-        {
+        {   rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            doubleJump = true;
+        } else if (Input.GetButtonDown("Jump") && doubleJump == true){
+            
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            doubleJump = false;
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
