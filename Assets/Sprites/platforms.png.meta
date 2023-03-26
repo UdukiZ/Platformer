@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9b587c66399bf6e4ebe991be26c7614a
+guid: 2618eb79af2e02a4daa64d23d66b94f1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,52 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: goth texture_0
+      name: platforms_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 23, y: 25}
+        - {x: 19, y: 15}
+        - {x: 17, y: 4}
+        - {x: 9, y: 15}
+        - {x: 5, y: 15}
+        - {x: 1, y: 6}
+        - {x: -2, y: 11}
+        - {x: -4, y: 25}
+        - {x: -5, y: 26}
+        - {x: -15, y: 26}
+        - {x: -17, y: 17}
+        - {x: -25, y: 26}
+        - {x: -30, y: 26}
+        - {x: -30, y: 21}
+        - {x: -30, y: -32}
+        - {x: 30, y: -32}
+        - {x: 30, y: 15}
+        - {x: 27, y: 25}
+      tessellationDetail: 0.32
+      bones: []
+      spriteID: ac5aeacf147fbce489bb28d881d39bcb
+      internalID: -1612701013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platforms_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d301c8916bc43e04988d0f28d1b1b479
-      internalID: 938896767
+      spriteID: 4c33e7da08a2db64baec8cef0af0ca3f
+      internalID: 2096916515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goth texture_1
+      name: platforms_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 48
-        width: 16
-        height: 16
+        x: 160
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3eb07f4e3487a794eaf052cf25f6d034
-      internalID: 802184768
+      spriteID: 2518611f4c3044041b774c501f906d68
+      internalID: -537403382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goth texture_2
+      name: platforms_3
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
+        x: 240
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +212,82 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b171c5ba3c211a4087c2f2f8b9fe60f
-      internalID: -1513961316
+      spriteID: 4f7772a207bfe0942b5a1966269af086
+      internalID: -1916890276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goth texture_3
+      name: platforms_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0d3d23f6e40c545995df3695690141
+      internalID: -1034902518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platforms_5
       rect:
         serializedVersion: 2
         x: 0
         y: 48
-        width: 16
-        height: 16
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 30, y: 23.5}
+        - {x: 24, y: 23.5}
+        - {x: 23, y: 20.5}
+        - {x: 19, y: 0.5}
+        - {x: 16, y: 3.5}
+        - {x: 10, y: 14.5}
+        - {x: 5, y: 14.5}
+        - {x: 1, y: 5.5}
+        - {x: -1, y: 0.5}
+        - {x: -2, y: 16.5}
+        - {x: -7, y: 21.5}
+        - {x: -11, y: 21.5}
+        - {x: -16, y: -1.5}
+        - {x: -22, y: 23.5}
+        - {x: -28, y: 23.5}
+        - {x: -29, y: 20.5}
+        - {x: -29, y: 10.5}
+        - {x: -29, y: -31.5}
+        - {x: 31, y: -31.5}
+        - {x: 31, y: 19.5}
+      tessellationDetail: 0.32
+      bones: []
+      spriteID: 2dbbff632007af2409c2a7f321dcbae9
+      internalID: 305927210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platforms_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,29 +295,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a44ba138159a0fa44b68502f4af558bd
-      internalID: 1071016003
+      spriteID: b7561872b3e56854ab44f12ad291a92e
+      internalID: 1103107995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goth texture_4
+      name: platforms_7
       rect:
         serializedVersion: 2
-        x: 80
+        x: 160
         y: 48
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66bdd474fee59b94a9e9ffe090fb15fc
-      internalID: -1525467550
+      spriteID: 72619da8a333b9b4fb4e0eb39eb56aa3
+      internalID: 2054959651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platforms_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f281c65f95e47540955e3da69b4eea9
+      internalID: 21064769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platforms_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 48
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750116876fda04742841f6f491fe3dd6
+      internalID: -129868122
       vertices: []
       indices: 
       edges: []
@@ -232,11 +375,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      goth texture_1: 938896767
-      goth texture_0: 672884222
-      goth texture_4: -1525467550
-      goth texture_2: 802184768
-      goth texture_3: 1071016003
+      platforms_4: -1034902518
+      platforms_3: -1916890276
+      platforms_9: -129868122
+      platforms_1: 2096916515
+      platforms_5: 305927210
+      platforms_8: 21064769
+      platforms_0: -1612701013
+      platforms_7: 2054959651
+      platforms_2: -537403382
+      platforms_6: 1103107995
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
