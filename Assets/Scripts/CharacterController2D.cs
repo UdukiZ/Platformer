@@ -15,11 +15,15 @@ public class CharacterController2D : MonoBehaviour
     public float dashingPower = 12f;
     public float dashingTime = 0.2f;
     public float dashingCooldown = .5f;
+    public ParticleSystem dust;
 
     private bool jumpKey = false;
     private bool dashKey = false;
     public GameObject Canvas;
     private playerAnimation _playerAnim;
+    
+    public AudioSource noise1;
+    public AudioSource noise2;
 
     public static string[] tutorialText = new string[2]
         {
@@ -52,10 +56,13 @@ public class CharacterController2D : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {   rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             doubleJump = true;
+            noise2.Play();
+            createDust();
 
         } else if (Input.GetButtonDown("Jump") && doubleJump == true && jumpKey == true){
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             doubleJump = false;
+            noise2.Play();
 
         }
 
@@ -68,6 +75,8 @@ public class CharacterController2D : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashKey == true)
         {
             StartCoroutine(Dash());
+            noise1.Play();
+            createDust();
         }
 
         Flip();
@@ -86,7 +95,6 @@ public class CharacterController2D : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    
     }
 
     private void Flip()
@@ -133,5 +141,9 @@ public class CharacterController2D : MonoBehaviour
         Canvas.SetActive(true);
         Canvas.GetComponentInChildren<TextMeshProUGUI>().text = tutorialText[1];
      }
+    }
+
+    void createDust(){
+        dust.Play();
     }
 }
